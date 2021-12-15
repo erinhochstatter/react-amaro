@@ -4,10 +4,32 @@ export interface RecipeSummary {
   description: string;
 }
 
-export interface Recipe extends RecipeSummary {
+export interface RecipeType extends RecipeSummary {
   instructions: string;
+  mixologist: string;
+  originalUrl: string;
+  ingredientRecipes: IngredientRecipe;
 }
 
-export interface RecipeListData {
+export interface RecipeListType {
   recipes: RecipeSummary[];
+}
+
+export interface IngredientRecipe {
+  id: number;
+  description: string;
+  quantity: number;
+  unit: Unit;
+  ingredient: Ingredient;
+}
+
+export interface Ingredient {
+  id: number;
+  name: string;
+  description: string;
+}
+
+export interface Unit {
+  id: number;
+  name: string;
 }

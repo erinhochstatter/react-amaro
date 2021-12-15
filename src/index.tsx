@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { Helmet } from "react-helmet";
+import { BrowserRouter } from "react-router-dom";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
@@ -22,7 +23,9 @@ ReactDOM.render(
       <title>Amaro</title>
     </Helmet>
     <ApolloProvider client={client}>
-      <App />
+      <BrowserRouter>
+        <App />
+        </BrowserRouter>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
