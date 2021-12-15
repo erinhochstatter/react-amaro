@@ -1,0 +1,67 @@
+.container {
+  align-items: space-between;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+
+  .item {
+    border-color: rgb(29, 46, 38);
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    height: 300px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    overflow: false;
+    text-align: center;
+  }
+
+  .glamourShot {
+    height: 200px;
+    width: 100%;
+    background-color: palevioletred;
+  }
+  .title {
+    font-family: 'lust';
+    font-size: medium;
+    height: 40px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: left;
+  }
+  .body {
+    font-size: 0.75rem;
+    height: 60px;
+    text-align: justify;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .truncateOverflow {
+    --max-lines: 2;
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+    padding-right: 1rem; /* space for ellipsis */
+  }
+  .truncateOverflow::before {
+    position: absolute;
+    content: "...";
+    inset-block-end: 0; /* "bottom" */
+    inset-inline-end: 0; /* "right" */
+  }
+  .truncateOverflow::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 0; /* "right" */
+    width: 1rem;
+    height: 1rem;
+    background: white;
+  }
+}

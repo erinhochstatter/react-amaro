@@ -1,9 +1,19 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { MockedProvider } from '@apollo/client/testing';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+
+test('renders a header component', () => {
+  const component = render(
+    <MockedProvider addTypename={false}>
+      <App />
+    </MockedProvider>,
+  );
+
+  const headerElement = screen.getByTestId("header");
+  expect(headerElement).toBeInTheDocument();
 });
+
+
