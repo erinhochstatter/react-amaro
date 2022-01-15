@@ -1,36 +1,32 @@
 .container {
-  align-items: space-between;
   border: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 20px;
-
-  .item {
-    border-color: rgb(29, 46, 38);
-    border-radius: 6px;
-    border-style: solid;
-    border-width: 1px;
-    height: 300px;
-    width: 210px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-bottom: 24px;
-    overflow: false;
-    text-align: center;
-  }
 
   .glamourShot {
     height: 200px;
     width: 100%;
     background-color: palevioletred;
   }
+  .recipe {
+    height: 200px;
+    width: 100%;
+    background-color: greenyellow;
+  }
   .title {
     font-family: 'lust';
     font-size: medium;
     height: 40px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: left;
+  }
+  .description {
+    font-size: medium;
+    font-style: 'italic';
+    height: 30px;
     padding-left: 6px;
     padding-right: 6px;
     text-align: left;

@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {useQuery, gql} from '@apollo/client';
-import {RecipeType} from './types'
+import {IngredientRecipe, RecipeType} from './types'
 import styles from './Recipe.module.scss';
 import { useParams } from 'react-router';
 
@@ -30,9 +30,7 @@ export const GET_RECIPE_QUERY = gql`
 
 export const Recipe: FC = () => {
   let {recipeId} = useParams();
-  console.log(recipeId);
-
-  const { loading, error, data } = useQuery<RecipeType>(GET_RECIPE_QUERY, {
+  const { loading, error, data } = useQuery<{recipe: RecipeType}>(GET_RECIPE_QUERY, {
     variables: { id: recipeId },
   });
 
@@ -40,10 +38,26 @@ export const Recipe: FC = () => {
   if (error) return <p>{`Error: ${error.message}`}</p>;
   if (!data) return <p>No recipe found 🥺</p>
 
+  const {recipe} = data;
+
   return (
     <div data-testid="recipe" className={styles.container}>
-      <p>uh, hello?</p>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <div className={styles.glamourShot}/>
+      <div className={styles.recipe}>
+        <div className={styles.title}>{recipe.title}</div>
+        <div className={styles.description}>{recipe.description}</div>
+        {!!recipe.ingredientRecipes && renderIngredientRows(recipe.ingredientRecipes) }
+      </div>
     </div>)
+}
+
+const renderIngredientRows = (ingredientRecipes: IngredientRecipe[]) => {
+  console.log(ingredientRecipes)
+  return ingredientRecipes.map((ir: IngredientRecipe) => (
+    <div>
+      <p>{ir.quantity} {ir.unit.name} {ir.ingredient.name}</p>
+      <p>{ir.ingredient.description}</p>
+    </div>
+  ))
 }
 

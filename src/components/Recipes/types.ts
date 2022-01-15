@@ -8,7 +8,7 @@ export interface RecipeType extends RecipeSummary {
   instructions: string;
   mixologist: string;
   originalUrl: string;
-  ingredientRecipes: IngredientRecipe;
+  ingredientRecipes: IngredientRecipe[];
 }
 
 export interface RecipeListType {
