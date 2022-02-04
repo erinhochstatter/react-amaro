@@ -5,16 +5,61 @@
   display: flex;
   flex-direction: column;
   font-size: 20px;
-  height: 300px;
   justify-content: center;
+  }
+
+  .logotown {
+    align-items: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logotownMain {
+    align-items: center;
+    display: flex;
+    width: 20vmax;
+    flex-direction: column;
+  }
+
+  .snek {
+    display: flex;
+    height: 20vmin;
+    width: 20vmax;
+    justify-content: center;
+    text-align: center;
+  }
 
   .heroText {
     display: flex;
+    flex-direction: column;
     font-family: 'lust';
-    font-size: 40px;
+    font-size: 48px;
     justify-content: center;
     text-align: center;
-    width: 25%;
-    height: 20vmin;
+    width: 50vmax;
+
   }
-}
+
+  .logotownLeft {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+  }
+  .swag {
+    width: 25vmax;
+  }
+  .sideDot {
+    width: 7vmax;
+  }
+
+  .logotownRight {
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+  }
+  .reverseSwag {
+    width: 25vmax;
+    transform: rotateY(0.5turn);
+  }

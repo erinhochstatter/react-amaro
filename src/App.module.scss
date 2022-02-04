@@ -2,37 +2,3 @@
   text-align: center;
   background: rgb(29, 46, 38);
 }
-
-.logotown{
-  align-items: start;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-.snek {
-  display: flex;
-  height: 20vmin;
-  justify-content: center;
-  text-align: center;
-}
-
-.logotownLeft {
-  display: flex;
-  flex-direction: column;
-}
-.swag {
-  width: 25vmax;
-}
-.sideDot {
-  width: 7vmax;
-}
-.logotownRight {
-  align-items: end;
-  display: flex;
-  flex-direction: column;
-}
-.reverseSwag {
-  width: 25vmax;
-  transform: rotateY(0.5turn);
-}
