@@ -1,9 +1,9 @@
 .container {
   align-items: center;
-  background: rgb(29, 46, 38);
   border: none;
-  color: goldenrod;
+  color: #ca9b50;
   display: flex;
+  flex-direction: column;
   font-size: 20px;
   height: 300px;
   justify-content: center;
@@ -15,6 +15,6 @@
     justify-content: center;
     text-align: center;
     width: 25%;
-    height: 100%;
+    height: 20vmin;
   }
 }

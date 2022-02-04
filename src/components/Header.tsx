@@ -1,5 +1,4 @@
 import styles from './Header.module.scss';
-
 export function Header() {
   return (
     <div data-testid="header" className={styles.container}>
